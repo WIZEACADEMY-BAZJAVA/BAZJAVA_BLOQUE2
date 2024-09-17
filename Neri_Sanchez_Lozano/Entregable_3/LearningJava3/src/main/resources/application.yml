@@ -1,0 +1,36 @@
+consumers:
+  login: '/api/login'
+  createUser: '/api/createUser'
+  createUsers: '/api/createUsers'
+  userAccount: '/api/getUserAccount'
+  accounts: '/api/getAccounts'
+  accountsGroupByType: '/api/getAccountsGroupByType'
+secret : 'H0l@s3cr3t0'
+whiteList: '/authenticate, /swagger-ui/**, /v3/api-docs/**'
+info:
+  app:
+    name: 'Wizeline App - Neri Sanchez Lozano'
+    java:
+      version: '1.0.0'
+    type: 'Spring boot'
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+  info:
+  
+    env:
+      enabled: true
+api:
+  activity: 'https://www.boredapi.com/api/activity'
+spring:
+  batch:
+    job:
+      enabled: false
+  #data:
+    #mongodb:
+      #host: host.docker.internal
+server:
+  port: 8080
