@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "a6361d04-593d-4776-9d53-b69009ac8cad",
+		"name": "LearningJava Entregable2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23839688"
+	},
+	"item": [
+		{
+			"name": "Autentificacion",
+			"item": [
+				{
+					"name": "LearningJava/Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"USER\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPoints Expuestos",
+			"item": [
+				{
+					"name": "LearningJava/getAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getAccounts?date=01-09-1989",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getAccounts"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "01-09-1989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/updateUserAccounts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/updateUserAccounts?oldUser=user3@wizeline.com&newUser=user1@wizeline.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"updateUserAccounts"
+							],
+							"query": [
+								{
+									"key": "oldUser",
+									"value": "user3@wizeline.com"
+								},
+								{
+									"key": "newUser",
+									"value": "user1@wizeline.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/SayHello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/sayHello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sayHello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/Actuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/getXMLApiPublica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/jaxb/getXMLAPIPublica?id=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jaxb",
+								"getXMLAPIPublica"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/createUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"user\": \"user1@wizeline.com\",\r\n        \"password\": \"pass1\"\r\n    },\r\n    {\r\n        \"user\": \"user2@wizeline.com\",\r\n        \"password\": \"pass2\"\r\n    },\r\n    {\r\n        \"user\": \"user3@wizeline.com\",\r\n        \"password\": \"pass3\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/createUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"createUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/createDefaultUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/createDefaultUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"createDefaultUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPoints Rol Usuario",
+			"item": [
+				{
+					"name": "LearningJava/getAccountsByUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVU0VSIiwidXNlcm5hbWUiOiJVU0VSIiwiYXV0aG9yaXRpZXMiOiJST0xFX1VTRVIiLCJkYXRlIjoxNjY3ODYyNjc0NDEzLCJleHAiOjE2Njc4NjI5NzR9.MAPTNrW17KqylZegI3HyQDeshY7PoPqkDM1U8Qh2E6v2UpNSqK6pn1daowfkCnGqcW529Ba0m37yGNbMDIQgvQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/getAccountByUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getAccountByUser"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "user1@wizeline.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPoints Rol Admin",
+			"item": [
+				{
+					"name": "LearningJava/deleteAccounts",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTiIsInVzZXJuYW1lIjoiQURNSU4iLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4sUk9MRV9VU0VSIiwiZGF0ZSI6MTY2NzgzOTI0NDE1MiwiZXhwIjoxNjY3ODM5NTQ0fQ.oAW_BlBZ20vGq2M3wzxIeDFGQdwckNyDo3702bWuIHxYr-2xukdxWVoHbMAnXd_dUgsKGbfDvk0_8W8BHG314w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/deleteAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"deleteAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LearningJava/getAccountsGroupByType",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTiIsInVzZXJuYW1lIjoiQURNSU4iLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4sUk9MRV9VU0VSIiwiZGF0ZSI6MTY2NzgzOTI0NDE1MiwiZXhwIjoxNjY3ODM5NTQ0fQ.oAW_BlBZ20vGq2M3wzxIeDFGQdwckNyDo3702bWuIHxYr-2xukdxWVoHbMAnXd_dUgsKGbfDvk0_8W8BHG314w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/getAccountsGroupByType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getAccountsGroupByType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
